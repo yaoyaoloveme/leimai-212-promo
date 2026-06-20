@@ -3,981 +3,747 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>雷麦科技 212 骑士智能前杠系统</title>
-  <meta name="description" content="雷麦科技 212 骑士智能前杠系统宣传页">
+  <title>212越野改装代理产品目录</title>
+  <meta name="description" content="212越野改装代理产品长网页，包含灯具批发价、X-BVLL 绞盘与救援装备代理价格。">
+  <link rel="icon" href="data:,">
   <style>
     :root {
-      --bg: #060709;
-      --panel: #101216;
-      --panel-soft: #171a20;
-      --line: rgba(255, 255, 255, .13);
-      --text: #f5f2ea;
-      --muted: #a9adb6;
-      --gold: #f4b21f;
-      --gold-soft: #d58b22;
-      --cyan: #6ed8ff;
-      --steel: #c7ccd4;
-      --shadow: 0 28px 80px rgba(0, 0, 0, .46);
+      --bg: #05070a;
+      --bg2: #0b1118;
+      --panel: rgba(14, 19, 25, .88);
+      --panel2: rgba(20, 27, 36, .92);
+      --line: rgba(134, 216, 255, .22);
+      --line2: rgba(255, 255, 255, .12);
+      --text: #f5f7fb;
+      --muted: #aab5c4;
+      --dim: #738092;
+      --cyan: #54d5ff;
+      --blue: #1679ff;
+      --gold: #f6b43b;
+      --red: #ff4b3e;
+      --green: #70f0a4;
+      --shadow: 0 24px 70px rgba(0, 0, 0, .46);
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
-      background: var(--bg);
       color: var(--text);
+      background:
+        radial-gradient(circle at 18% 5%, rgba(84, 213, 255, .16), transparent 26rem),
+        radial-gradient(circle at 82% 18%, rgba(246, 180, 59, .13), transparent 28rem),
+        linear-gradient(180deg, #05070a 0%, #08101a 38%, #05070a 100%);
       font-family: "Inter", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
       letter-spacing: 0;
     }
-
-    img {
-      display: block;
-      max-width: 100%;
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: .23;
+      background-image:
+        linear-gradient(rgba(84, 213, 255, .12) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(84, 213, 255, .09) 1px, transparent 1px);
+      background-size: 72px 72px;
+      mask-image: linear-gradient(180deg, rgba(0,0,0,.9), rgba(0,0,0,.22), transparent 95%);
+      z-index: -1;
     }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    p {
-      overflow-wrap: anywhere;
-    }
-
-    .site-shell {
-      min-height: 100vh;
-      overflow: hidden;
-      background:
-        linear-gradient(180deg, rgba(255, 255, 255, .04), transparent 360px),
-        #060709;
-    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
 
     .nav {
-      position: fixed;
-      inset: 0 0 auto;
-      z-index: 20;
+      position: sticky;
+      top: 0;
+      z-index: 30;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 24px;
-      padding: 22px clamp(20px, 4vw, 64px);
-      border-bottom: 1px solid rgba(255, 255, 255, .08);
-      background: rgba(6, 7, 9, .58);
+      gap: 20px;
+      padding: 16px clamp(18px, 4vw, 64px);
+      border-bottom: 1px solid rgba(255,255,255,.09);
+      background: rgba(5, 7, 10, .72);
       backdrop-filter: blur(18px);
     }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      min-width: 0;
-    }
-
+    .brand { display: flex; align-items: center; gap: 12px; min-width: 0; }
     .brand-mark {
-      width: 42px;
-      height: 30px;
+      width: 44px; height: 28px;
       border: 2px solid var(--cyan);
-      border-right-width: 9px;
-      transform: skewX(-14deg);
-      box-shadow: 0 0 22px rgba(110, 216, 255, .25);
+      border-right-width: 10px;
+      transform: skewX(-16deg);
+      box-shadow: 0 0 24px rgba(84, 213, 255, .34);
+      flex: 0 0 auto;
     }
-
-    .brand strong {
-      display: block;
-      font-size: 17px;
-      line-height: 1.1;
-      white-space: nowrap;
-    }
-
-    .brand span {
-      display: block;
-      margin-top: 4px;
-      color: var(--muted);
-      font-size: 11px;
-      line-height: 1;
-      text-transform: uppercase;
-      letter-spacing: .18em;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: clamp(14px, 2vw, 32px);
-      color: rgba(245, 242, 234, .76);
-      font-size: 14px;
-    }
-
-    .nav-links a {
-      transition: color .2s ease;
-    }
-
-    .nav-links a:hover {
-      color: var(--text);
-    }
-
-    .nav-cta {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 42px;
-      padding: 0 18px;
-      border: 1px solid rgba(244, 178, 31, .7);
-      border-radius: 4px;
-      background: rgba(244, 178, 31, .08);
-      color: #ffd98a;
-      font-weight: 700;
-    }
+    .brand strong { display: block; font-size: 16px; line-height: 1.1; white-space: nowrap; }
+    .brand span { display: block; margin-top: 4px; color: var(--muted); font-size: 11px; letter-spacing: .16em; }
+    .nav-links { display: flex; gap: clamp(14px, 2.6vw, 34px); color: rgba(245,247,251,.78); font-size: 14px; }
+    .nav-links a:hover { color: var(--cyan); }
 
     .hero {
-      position: relative;
       min-height: 88vh;
+      position: relative;
       display: grid;
       align-items: end;
-      padding: 132px clamp(20px, 4vw, 64px) 58px;
-      isolation: isolate;
+      padding: clamp(86px, 11vw, 140px) clamp(20px, 5vw, 78px) 56px;
+      overflow: hidden;
     }
-
     .hero::before {
       content: "";
       position: absolute;
       inset: 0;
-      z-index: -2;
       background:
-        linear-gradient(90deg, rgba(6, 7, 9, .92) 0%, rgba(6, 7, 9, .58) 38%, rgba(6, 7, 9, .16) 70%),
-        linear-gradient(180deg, rgba(6, 7, 9, .16) 0%, rgba(6, 7, 9, .08) 48%, #060709 100%),
+        linear-gradient(90deg, rgba(5,7,10,.96) 0%, rgba(5,7,10,.72) 42%, rgba(5,7,10,.18) 78%),
+        linear-gradient(180deg, rgba(5,7,10,.1) 0%, rgba(5,7,10,.22) 55%, #05070a 100%),
         url("assets/front-stance.png") center / cover no-repeat;
+      z-index: -2;
+      transform: scale(1.02);
     }
-
     .hero::after {
       content: "";
       position: absolute;
-      inset: auto 0 0;
-      height: 34%;
+      inset: 0;
       z-index: -1;
-      background: linear-gradient(180deg, transparent, #060709);
+      background:
+        linear-gradient(115deg, transparent 0 49%, rgba(84,213,255,.18) 50%, transparent 51% 100%),
+        linear-gradient(90deg, transparent, rgba(84,213,255,.08), transparent);
+      mix-blend-mode: screen;
+      opacity: .65;
     }
-
-    .hero-content {
-      width: min(760px, 100%);
-      min-width: 0;
-    }
-
+    .hero-content { max-width: 780px; }
     .eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      color: #ffce63;
-      font-size: 13px;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: .18em;
-    }
-
-    .eyebrow::before {
-      content: "";
-      width: 42px;
-      height: 1px;
-      background: currentColor;
-    }
-
-    h1 {
-      margin: 22px 0 18px;
-      max-width: 720px;
-      font-size: clamp(48px, 8vw, 112px);
-      line-height: .88;
-      letter-spacing: 0;
-      text-transform: uppercase;
-    }
-
-    h1 span + span {
-      margin-left: .08em;
-    }
-
-    .hero-subtitle {
-      max-width: 600px;
-      margin: 0;
-      color: rgba(245, 242, 234, .78);
-      font-size: clamp(17px, 1.8vw, 22px);
-      line-height: 1.7;
-      overflow-wrap: anywhere;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
       gap: 12px;
-      margin-top: 34px;
-    }
-
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 50px;
-      padding: 0 22px;
-      border-radius: 4px;
-      border: 1px solid var(--line);
-      color: var(--text);
-      font-weight: 800;
-      transition: transform .2s ease, border-color .2s ease, background .2s ease;
-    }
-
-    .button:hover {
-      transform: translateY(-2px);
-    }
-
-    .button.primary {
-      border-color: transparent;
-      background: var(--gold);
-      color: #12100a;
-      box-shadow: 0 18px 42px rgba(244, 178, 31, .26);
-    }
-
-    button.button {
-      cursor: pointer;
-      font: inherit;
-    }
-
-    .button.ghost {
-      background: rgba(255, 255, 255, .06);
-    }
-
-    .quick-spec {
-      position: absolute;
-      right: clamp(20px, 4vw, 64px);
-      bottom: 48px;
-      display: grid;
-      grid-template-columns: repeat(3, minmax(86px, 1fr));
-      gap: 1px;
-      width: min(420px, calc(100% - 40px));
-      border: 1px solid rgba(255, 255, 255, .12);
-      background: rgba(255, 255, 255, .12);
-      box-shadow: var(--shadow);
-    }
-
-    .quick-spec div {
-      min-height: 88px;
-      padding: 18px;
-      background: rgba(7, 8, 11, .72);
-      backdrop-filter: blur(16px);
-    }
-
-    .quick-spec strong {
-      display: block;
-      color: var(--gold);
-      font-size: 25px;
-      line-height: 1;
-    }
-
-    .quick-spec span {
-      display: block;
-      margin-top: 10px;
-      color: rgba(245, 242, 234, .64);
-      font-size: 12px;
-      line-height: 1.35;
-    }
-
-    section {
-      position: relative;
-      padding: clamp(64px, 8vw, 118px) clamp(20px, 4vw, 64px);
-    }
-
-    .section-inner {
-      width: min(1180px, 100%);
-      margin: 0 auto;
-    }
-
-    .section-head {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(280px, 460px);
-      align-items: end;
-      gap: 34px;
-      margin-bottom: 34px;
-    }
-
-    .section-head > * {
-      min-width: 0;
-    }
-
-    .kicker {
-      margin: 0 0 12px;
-      color: var(--cyan);
-      font-size: 12px;
+      color: #ffcc73;
+      font-size: 13px;
       font-weight: 900;
       letter-spacing: .18em;
       text-transform: uppercase;
     }
-
-    h2 {
-      margin: 0;
-      font-size: clamp(32px, 5vw, 68px);
-      line-height: .98;
+    .eyebrow::before { content: ""; width: 46px; height: 2px; background: currentColor; }
+    h1 {
+      margin: 22px 0 20px;
+      font-size: clamp(44px, 8vw, 112px);
+      line-height: .94;
       letter-spacing: 0;
+      text-transform: uppercase;
     }
-
-    .section-copy {
+    .hero-subtitle {
+      max-width: 680px;
       margin: 0;
-      color: var(--muted);
-      font-size: 16px;
+      color: rgba(245,247,251,.82);
+      font-size: clamp(16px, 1.7vw, 22px);
       line-height: 1.8;
     }
-
-    .feature-grid {
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 20px;
+      border-radius: 6px;
+      border: 1px solid rgba(84,213,255,.42);
+      background: linear-gradient(135deg, rgba(84,213,255,.18), rgba(22,121,255,.08));
+      color: #dff7ff;
+      font-weight: 800;
+      box-shadow: 0 0 24px rgba(84,213,255,.12);
+    }
+    .button.gold { border-color: rgba(246,180,59,.55); color: #ffe0a4; background: rgba(246,180,59,.12); }
+    .hero-stats {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 14px;
+      gap: 1px;
+      width: min(920px, 100%);
+      margin-top: 42px;
+      border: 1px solid rgba(255,255,255,.1);
+      background: rgba(255,255,255,.08);
     }
+    .hero-stat { padding: 18px; background: rgba(8,13,19,.68); }
+    .hero-stat b { display: block; color: var(--cyan); font-size: clamp(24px, 3.2vw, 42px); }
+    .hero-stat span { color: var(--muted); font-size: 13px; }
 
-    .feature {
-      min-height: 220px;
-      padding: 24px;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: linear-gradient(180deg, rgba(255, 255, 255, .065), rgba(255, 255, 255, .022));
-    }
-
-    .feature-icon {
-      width: 42px;
-      height: 42px;
+    .section { padding: 72px clamp(18px, 5vw, 78px); }
+    .section.tight { padding-top: 34px; }
+    .section-head {
       display: grid;
-      place-items: center;
-      margin-bottom: 28px;
-      border: 1px solid rgba(110, 216, 255, .36);
-      border-radius: 8px;
-      color: var(--cyan);
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 24px;
+      align-items: end;
+      margin-bottom: 30px;
     }
+    .section-code { color: var(--cyan); font-size: 12px; font-weight: 900; letter-spacing: .2em; text-transform: uppercase; }
+    h2 { margin: 10px 0 0; font-size: clamp(30px, 4.8vw, 64px); line-height: 1; }
+    .section-head p { max-width: 620px; margin: 0; color: var(--muted); line-height: 1.8; }
 
-    .feature-icon svg {
-      width: 24px;
-      height: 24px;
-      stroke: currentColor;
-      stroke-width: 1.7;
-      fill: none;
-    }
-
-    .feature h3 {
-      margin: 0 0 12px;
-      font-size: 20px;
-    }
-
-    .feature p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.75;
-    }
-
-    .showcase {
-      background: #090a0d;
-      border-top: 1px solid rgba(255, 255, 255, .08);
-      border-bottom: 1px solid rgba(255, 255, 255, .08);
-    }
-
-    .showcase-grid {
+    .category-strip {
       display: grid;
-      grid-template-columns: minmax(0, 1.22fr) minmax(320px, .78fr);
-      gap: clamp(20px, 3vw, 42px);
-      align-items: center;
-    }
-
-    .focus-frame {
-      position: relative;
-      overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, .12);
-      border-radius: 8px;
-      background: var(--panel);
-      box-shadow: var(--shadow);
-      aspect-ratio: 4 / 3;
-    }
-
-    .focus-frame img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .focus-label {
-      position: absolute;
-      left: 18px;
-      bottom: 18px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 10px 12px;
-      border: 1px solid rgba(255, 255, 255, .16);
-      border-radius: 4px;
-      background: rgba(5, 6, 8, .7);
-      color: rgba(245, 242, 234, .82);
-      backdrop-filter: blur(12px);
-      font-size: 13px;
-    }
-
-    .focus-label::before {
-      content: "";
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--cyan);
-      box-shadow: 0 0 14px var(--cyan);
-    }
-
-    .detail-panel {
-      padding: clamp(24px, 3.8vw, 42px);
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: linear-gradient(180deg, rgba(255, 255, 255, .07), rgba(255, 255, 255, .025));
-    }
-
-    .detail-panel h2 {
-      font-size: clamp(30px, 4vw, 54px);
-    }
-
-    .detail-list {
-      display: grid;
+      grid-template-columns: repeat(4, minmax(0,1fr));
       gap: 12px;
-      margin: 28px 0 0;
-      padding: 0;
-      list-style: none;
+      margin-top: -22px;
     }
-
-    .detail-list li {
-      display: grid;
-      grid-template-columns: 28px minmax(0, 1fr);
-      gap: 12px;
-      align-items: start;
-      color: rgba(245, 242, 234, .76);
-      line-height: 1.65;
-    }
-
-    .detail-list li::before {
-      content: "";
-      width: 10px;
-      height: 10px;
-      margin-top: 8px;
-      border: 1px solid var(--gold);
-      transform: rotate(45deg);
-      box-shadow: 0 0 16px rgba(244, 178, 31, .28);
-    }
-
-    .thumb-strip {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 10px;
-      margin-top: 16px;
-    }
-
-    .thumb {
-      height: 92px;
-      padding: 0;
-      overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, .12);
+    .category-tile {
+      min-height: 118px;
+      padding: 18px;
+      border: 1px solid var(--line2);
       border-radius: 8px;
-      background: #111;
-      cursor: pointer;
-      opacity: .72;
-      transition: opacity .2s ease, border-color .2s ease, transform .2s ease;
+      background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.08);
     }
+    .category-tile span { color: var(--cyan); font-size: 12px; font-weight: 900; }
+    .category-tile strong { display:block; margin-top: 12px; font-size: 22px; }
+    .category-tile p { margin: 8px 0 0; color: var(--muted); line-height: 1.55; font-size: 14px; }
 
-    .thumb:hover,
-    .thumb.active {
-      opacity: 1;
-      border-color: rgba(244, 178, 31, .72);
-      transform: translateY(-2px);
-    }
-
-    .thumb img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .spec-band {
-      padding-top: 0;
-    }
-
-    .spec-layout {
-      display: grid;
-      grid-template-columns: minmax(280px, .88fr) minmax(0, 1.12fr);
-      gap: clamp(22px, 3vw, 44px);
-      align-items: stretch;
-    }
-
-    .spec-copy {
+    .product-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+    .product-card {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      gap: 30px;
-      padding: clamp(28px, 4vw, 48px);
-      border: 1px solid var(--line);
+      min-width: 0;
+      border: 1px solid rgba(84,213,255,.18);
       border-radius: 8px;
-      background:
-        linear-gradient(135deg, rgba(110, 216, 255, .1), transparent 42%),
-        var(--panel);
-    }
-
-    .spec-copy h2 {
-      font-size: clamp(31px, 4.4vw, 58px);
-    }
-
-    .spec-copy p {
-      margin: 20px 0 0;
-      color: var(--muted);
-      line-height: 1.85;
-    }
-
-    .mini-metrics {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 10px;
-    }
-
-    .metric {
-      padding: 16px;
-      border: 1px solid rgba(255, 255, 255, .12);
-      border-radius: 8px;
-      background: rgba(255, 255, 255, .035);
-    }
-
-    .metric strong {
-      display: block;
-      color: var(--steel);
-      font-size: 22px;
-    }
-
-    .metric span {
-      display: block;
-      margin-top: 8px;
-      color: var(--muted);
-      font-size: 12px;
-      line-height: 1.45;
-    }
-
-    .spec-image {
-      position: relative;
+      background: linear-gradient(180deg, rgba(17,24,32,.92), rgba(8,12,18,.95));
+      box-shadow: var(--shadow);
       overflow: hidden;
-      min-height: 620px;
+    }
+    .product-image-wrap { position: relative; padding: 16px; background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.02)); }
+    .product-image-wrap img { width: 100%; aspect-ratio: 4 / 3; object-fit: contain; border-radius: 6px; background: #f8fafc; }
+    .product-index {
+      position: absolute;
+      top: 28px;
+      left: 28px;
+      z-index: 2;
+      padding: 5px 9px;
+      border-radius: 999px;
+      background: rgba(5,7,10,.76);
+      border: 1px solid rgba(84,213,255,.35);
+      color: var(--cyan);
+      font-size: 12px;
+      font-weight: 900;
+    }
+    .product-body { display:flex; flex-direction:column; flex:1; padding: 20px; }
+    .product-kicker { color: var(--cyan); font-size: 11px; font-weight: 900; letter-spacing: .12em; }
+    .product-card h3 { margin: 8px 0 10px; font-size: 24px; line-height: 1.2; }
+    .product-card p { margin: 0; color: var(--muted); line-height: 1.7; min-height: 56px; }
+    .tag-row { display:flex; flex-wrap:wrap; gap:8px; margin: 16px 0; }
+    .tag-row span { padding: 6px 9px; border: 1px solid rgba(255,255,255,.13); border-radius: 999px; color: #d9e3ef; font-size: 12px; background: rgba(255,255,255,.05); }
+    .price-board { margin-top: auto; border-top: 1px solid rgba(255,255,255,.1); padding-top: 14px; display:grid; gap:10px; }
+    .price-line { display:grid; grid-template-columns: minmax(0,1fr) auto; gap:10px; align-items:end; }
+    .price-line span { color: var(--muted); font-size: 13px; }
+    .price-line b { color: #fff; font-size: 22px; line-height: 1; }
+    .price-line em { grid-column: 1 / -1; color: var(--dim); font-style: normal; font-size: 12px; margin-top: -6px; }
+    .price-line.primary b { color: var(--gold); font-size: 30px; }
+    .price-line.subtle b { color: #9be7ff; }
+
+    .lighting-layout { display:grid; gap: 20px; }
+    .lighting-note {
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      align-items:center;
+      padding: 18px 20px;
+      border: 1px solid rgba(246,180,59,.24);
       border-radius: 8px;
-      border: 1px solid rgba(255, 255, 255, .12);
-      background: #101114;
+      background: linear-gradient(90deg, rgba(246,180,59,.12), rgba(84,213,255,.08));
+    }
+    .lighting-note p { margin: 0; color: #f4dfb8; line-height: 1.7; }
+    .lighting-note a { flex:0 0 auto; color:#fff; font-weight:900; border-bottom: 1px solid var(--gold); }
+    .lighting-grid { display:grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap:18px; }
+    .lighting-card {
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 8px;
+      overflow:hidden;
+      background: rgba(12,17,24,.88);
       box-shadow: var(--shadow);
     }
-
-    .spec-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    .lighting-head {
+      display:grid;
+      grid-template-columns: minmax(0,1fr) auto;
+      gap:10px;
+      align-items:end;
+      padding: 16px 18px;
+      border-bottom: 1px solid rgba(255,255,255,.1);
+      background: linear-gradient(90deg, rgba(84,213,255,.12), transparent);
     }
+    .lighting-head span { grid-column: 1 / -1; color: var(--cyan); font-size: 11px; font-weight:900; letter-spacing:.14em; }
+    .lighting-head h3 { margin:0; font-size: 22px; }
+    .lighting-head a { color:#ffd892; font-weight:900; font-size: 13px; }
+    .lighting-image { display:block; max-height: 880px; overflow:auto; background:#f2f4f7; }
+    .lighting-image img { width:100%; max-width:none; }
 
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
+    .remarks {
+      display:grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 18px;
+      align-items: stretch;
     }
-
-    .gallery-item {
-      overflow: hidden;
+    .remark-panel {
+      padding: 28px;
+      border: 1px solid rgba(255,255,255,.12);
       border-radius: 8px;
-      border: 1px solid rgba(255, 255, 255, .12);
-      background: #111;
-      aspect-ratio: 4 / 3;
+      background: linear-gradient(145deg, rgba(20,27,36,.92), rgba(8,12,18,.96));
     }
-
-    .gallery-item.wide {
-      grid-column: span 2;
-    }
-
-    .gallery-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform .5s ease;
-    }
-
-    .gallery-item:hover img {
-      transform: scale(1.035);
-    }
-
-    .closing {
-      min-height: 560px;
-      display: grid;
-      align-items: center;
+    .remark-panel h3 { margin:0 0 16px; font-size:28px; }
+    .remark-panel ul { margin:0; padding-left: 20px; color: var(--muted); line-height: 1.9; }
+    .contact-card {
+      min-height: 260px;
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-end;
+      padding: 28px;
+      border-radius: 8px;
+      border: 1px solid rgba(84,213,255,.22);
       background:
-        linear-gradient(90deg, rgba(6, 7, 9, .96) 0%, rgba(6, 7, 9, .78) 45%, rgba(6, 7, 9, .32) 100%),
-        url("assets/angle-profile.png") center / cover no-repeat;
-      border-top: 1px solid rgba(255, 255, 255, .08);
+        linear-gradient(180deg, rgba(5,7,10,.1), rgba(5,7,10,.82)),
+        url("assets/hero-side.png") center / cover no-repeat;
     }
+    .contact-card strong { font-size: 34px; line-height:1.1; }
+    .contact-card span { margin-top: 10px; color: var(--muted); line-height:1.7; }
 
-    .closing-content {
-      width: min(700px, 100%);
-    }
-
-    .closing h2 {
-      font-size: clamp(38px, 6vw, 76px);
-    }
-
-    .closing p {
-      max-width: 560px;
-      margin: 22px 0 0;
-      color: rgba(245, 242, 234, .76);
-      font-size: 18px;
-      line-height: 1.8;
-    }
-
-    .footer {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      padding: 26px clamp(20px, 4vw, 64px);
-      color: rgba(245, 242, 234, .48);
-      border-top: 1px solid rgba(255, 255, 255, .08);
-      font-size: 13px;
-    }
+    footer { padding: 28px clamp(18px, 5vw, 78px) 46px; color: var(--dim); border-top: 1px solid rgba(255,255,255,.08); }
 
     @media (max-width: 980px) {
-      .nav-links {
-        display: none;
-      }
-
-      .hero {
-        min-height: 86vh;
-        padding-top: 112px;
-      }
-
-      .hero::before {
-        background:
-          linear-gradient(180deg, rgba(6, 7, 9, .55) 0%, rgba(6, 7, 9, .3) 45%, #060709 100%),
-          url("assets/front-stance.png") center / cover no-repeat;
-      }
-
-      .quick-spec {
-        position: relative;
-        right: auto;
-        bottom: auto;
-        margin-top: 38px;
-      }
-
-      .section-head,
-      .showcase-grid,
-      .spec-layout {
-        grid-template-columns: 1fr;
-      }
-
-      .feature-grid,
-      .gallery-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .spec-image {
-        min-height: auto;
-        aspect-ratio: 1122 / 1402;
-      }
+      .nav { position: relative; align-items:flex-start; }
+      .nav-links { display:none; }
+      .hero { min-height: 76vh; }
+      .hero-stats, .category-strip, .product-grid, .lighting-grid, .remarks { grid-template-columns: 1fr 1fr; }
+      .section-head { grid-template-columns: 1fr; }
     }
-
     @media (max-width: 640px) {
-      .nav {
-        padding: 16px 18px;
-      }
-
-      .brand span,
-      .nav-cta {
-        display: none;
-      }
-
-      .brand .brand-mark {
-        display: block;
-      }
-
-      .hero {
-        min-height: 84vh;
-        padding: 102px 24px 42px;
-      }
-
-      .hero-content,
-      .hero-subtitle {
-        width: min(320px, calc(100vw - 48px));
-        max-width: min(320px, calc(100vw - 48px));
-      }
-
-      h1 {
-        max-width: 320px;
-        font-size: clamp(40px, 13vw, 52px);
-        line-height: 1.02;
-        word-break: keep-all;
-      }
-
-      h1 span {
-        display: block;
-      }
-
-      h1 span + span {
-        margin-left: 0;
-      }
-
-      .hero-actions {
-        width: min(320px, calc(100vw - 48px));
-        flex-direction: column;
-      }
-
-      .button {
-        width: 100%;
-        min-height: 48px;
-        padding: 0 16px;
-        flex: 0 0 auto;
-        font-size: 14px;
-      }
-
-      .quick-spec,
-      .feature-grid,
-      .thumb-strip,
-      .mini-metrics,
-      .gallery-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .quick-spec div {
-        min-height: 74px;
-      }
-
-      section {
-        padding-left: 18px;
-        padding-right: 18px;
-      }
-
-      .feature {
-        min-height: 0;
-      }
-
-      .focus-frame {
-        aspect-ratio: 4 / 3;
-      }
-
-      .thumb {
-        height: 118px;
-      }
-
-      .gallery-item.wide {
-        grid-column: auto;
-      }
-
-      .closing {
-        min-height: 620px;
-        background:
-          linear-gradient(180deg, rgba(6, 7, 9, .68) 0%, rgba(6, 7, 9, .52) 42%, #060709 100%),
-          url("assets/angle-profile.png") center / cover no-repeat;
-      }
-
-      .footer {
-        flex-direction: column;
-      }
+      .brand span { display:none; }
+      .hero { padding-top: 74px; }
+      .hero-stats, .category-strip, .product-grid, .lighting-grid, .remarks { grid-template-columns: 1fr; }
+      .hero-stat { padding: 14px; }
+      .section { padding: 52px 16px; }
+      .lighting-note { align-items:flex-start; flex-direction:column; }
+      .lighting-image { max-height: 620px; }
+      .product-card h3 { font-size: 22px; }
+      .price-line.primary b { font-size: 28px; }
     }
   </style>
 </head>
 <body>
-  <main class="site-shell">
-    <header class="nav">
-      <a class="brand" href="#top" aria-label="雷麦科技">
-        <span class="brand-mark" aria-hidden="true"></span>
-        <span>
-          <strong>雷麦科技</strong>
-          <span>Leimai Tech</span>
-        </span>
-      </a>
-      <nav class="nav-links" aria-label="页面导航">
-        <a href="#features">核心卖点</a>
-        <a href="#system">前杠系统</a>
-        <a href="#gallery">产品图集</a>
-      </nav>
-      <a class="nav-cta" href="#contact">获取方案</a>
-    </header>
+  <nav class="nav">
+    <a class="brand" href="#top" aria-label="回到顶部">
+      <span class="brand-mark"></span>
+      <span><strong>212 越野改装代理目录</strong><span>OFF-ROAD DEALER CATALOG</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="#xbvll">X-BVLL 救援装备</a>
+      <a href="#lighting">越野灯具批发价</a>
+      <a href="#notes">合作备注</a>
+    </div>
+  </nav>
 
-    <section class="hero" id="top">
+  <main id="top">
+    <section class="hero">
       <div class="hero-content">
-        <div class="eyebrow">LM-212 Off-road System</div>
-        <h1><span>212</span><span>骑士前杠</span></h1>
-        <p class="hero-subtitle">为硬派越野而生的智能前杠系统，把结构防护、绞盘预留、拖挂能力与专车姿态融合成一体。</p>
+        <div class="eyebrow">212 OFF-ROAD MODIFICATION</div>
+        <h1>代理产品<br>在线目录</h1>
+        <p class="hero-subtitle">面向 212 越野车改装代理的产品长网页，集中展示真实产品图、核心参数、代理打款价、最低出货价与官方零售价。灯具批发价来自原始 PDF 高清裁片，X-BVLL 产品来自 Excel 结构化价格表。</p>
         <div class="hero-actions">
-          <a class="button primary" href="#system">查看系统细节</a>
-          <a class="button ghost" href="#gallery">浏览整车效果</a>
+          <a class="button gold" href="#xbvll">查看代理价格</a>
+          <a class="button" href="#lighting">查看灯具批发表</a>
         </div>
-      </div>
-      <div class="quick-spec" aria-label="核心信息">
-        <div>
-          <strong>212</strong>
-          <span>骑士车型专属适配</span>
-        </div>
-        <div>
-          <strong>4x4</strong>
-          <span>硬派越野装备语言</span>
-        </div>
-        <div>
-          <strong>LM</strong>
-          <span>雷麦科技改装系统</span>
+        <div class="hero-stats">
+          <div class="hero-stat"><b>13</b><span>X-BVLL 产品</span></div>
+          <div class="hero-stat"><b>10</b><span>灯具批发表裁片</span></div>
+          <div class="hero-stat"><b>3</b><span>核心价格口径</span></div>
+          <div class="hero-stat"><b>212</b><span>越野改装场景</span></div>
         </div>
       </div>
     </section>
 
-    <section id="features">
-      <div class="section-inner">
-        <div class="section-head">
-          <div>
-            <p class="kicker">Designed for adventure</p>
-            <h2>把防护做进姿态里</h2>
-          </div>
-          <p class="section-copy">外观不是附加件，而是车辆性格的一部分。LM-212 前杠以硬朗折面、功能开孔与强化挂点，让城市通勤、长途穿越和野外救援都保持同一套高级秩序。</p>
-        </div>
+    <section class="section tight">
+      <div class="category-strip">
+        <a class="category-tile" href="#xbvll"><span>01 / RECOVERY</span><strong>绞盘系统</strong><p>12000LBS 与 13500LBS 尼龙绳车载绞盘。</p></a>
+        <a class="category-tile" href="#xbvll"><span>02 / TRACTION</span><strong>脱困装备</strong><p>脱困板、弹力绳、拖车组套、软卸扣。</p></a>
+        <a class="category-tile" href="#lighting"><span>03 / LIGHTING</span><strong>越野灯具</strong><p>射灯、灯条、日行灯等 PDF 全量批发价裁片。</p></a>
+        <a class="category-tile" href="#notes"><span>04 / DEALER</span><strong>代理备注</strong><p>不含税、起订量、运费和价格体系说明。</p></a>
+      </div>
+    </section>
 
-        <div class="feature-grid">
-          <article class="feature">
-            <div class="feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.6 2.9 8.7 7 10 4.1-1.3 7-5.4 7-10V6l-7-3Z"/><path d="M9 12.2 11.1 14.3 15.5 9.7"/></svg>
-            </div>
-            <h3>高强度结构</h3>
-            <p>面向越野使用场景强化防护区域，提升前部抗冲击与通过时的安心感。</p>
-          </article>
-          <article class="feature">
-            <div class="feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M5 8h14v7H5z"/><path d="M8 8V5h8v3"/><path d="M7 18h10"/><path d="M10 15v5h4v-5"/></svg>
-            </div>
-            <h3>绞盘预留</h3>
-            <p>关键位置提前规划安装空间，兼顾救援拓展和前脸整体的干净比例。</p>
-          </article>
-          <article class="feature">
-            <div class="feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M7 7h10v4H7z"/><path d="M4 15h16"/><path d="M8 15v3"/><path d="M16 15v3"/><path d="M6 18h4"/><path d="M14 18h4"/></svg>
-            </div>
-            <h3>拖挂加强</h3>
-            <p>强化拖挂点位让装备属性更明确，也让前杠视觉重心更稳。</p>
-          </article>
-          <article class="feature">
-            <div class="feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M4 15h16l-2-6H6l-2 6Z"/><path d="M7 15v3"/><path d="M17 15v3"/><path d="M8 11h8"/></svg>
-            </div>
-            <h3>专车适配</h3>
-            <p>围绕 212 骑士车身线条开发，让改装后的比例、间隙与姿态更完整。</p>
-          </article>
+    <section class="section" id="xbvll">
+      <div class="section-head">
+        <div>
+          <div class="section-code">X-BVLL PRODUCT MATRIX</div>
+          <h2>救援装备代理价格</h2>
+        </div>
+        <p>以下产品信息来自 Excel 价格体系表。每张卡保留代理最关心的价格口径：经销商打款价、最低出货价、官方指定零售价。</p>
+      </div>
+      <div class="product-grid">
+        
+      <article class="product-card" id="product-1">
+        <div class="product-image-wrap">
+          <span class="product-index">#01</span>
+          <img src="assets/products/product-row-3.jpg" alt="12000尼龙TT款">
+        </div>
+        <div class="product-body">
+          <div class="product-kicker">X-BVLL RECOVERY SYSTEM</div>
+          <h3>12000尼龙TT款</h3>
+          <p>12000LBS 尼龙绳车载绞盘拉力 12000LBS（5443kgs）</p>
+          <div class="tag-row"><span>彩盒</span></div>
+          <div class="price-board">
+            <div class="price-line primary"><span>经销商打款价</span><b>¥2880</b><em>不含税</em></div>
+            <div class="price-line subtle"><span>最低出货价</span><b>¥3580</b></div>
+            <div class="price-line"><span>官方指定零售价</span><b>¥5580</b></div>
+          </div>
+        </div>
+      </article>
+      <article class="product-card" id="product-2">
+        <div class="product-image-wrap">
+          <span class="product-index">#02</span>
+          <img src="assets/products/product-row-4.jpg" alt="12000尼龙BJ款">
+        </div>
+        <div class="product-body">
+          <div class="product-kicker">X-BVLL RECOVERY SYSTEM</div>
+          <h3>12000尼龙BJ款</h3>
+          <p>12000LBS 尼龙绳车载绞盘拉力 12000LBS（5443kgs）</p>
+          <div class="tag-row"><span>彩盒</span></div>
+          <div class="price-board">
+            <div class="price-line primary"><span>经销商打款价</span><b>¥2380</b><em>不含税</em></div>
+            <div class="price-line subtle"><span>最低出货价</span><b>¥2780</b></div>
+            <div class="price-line"><span>官方指定零售价</span><b>¥3980</b></div>
+          </div>
+        </div>
+      </article>
+      <article class="product-card" id="product-3">
+        <div class="product-image-wrap">
+          <span class="product-index">#03</span>
+          <img src="assets/products/product-row-5.jpg" alt="12000尼龙普通款">
+        </div>
+        <div class="product-body">
+          <div class="product-kicker">X-BVLL RECOVERY SYSTEM</div>
+          <h3>12000尼龙普通款</h3>
+          <p>12000LBS 尼龙绳车载绞盘拉力 12000LBS（5443kgs）</p>
+          <div class="tag-row"><span>彩盒</span></div>
+          <div class="price-board">
+            <div class="price-line primary"><span>经销商打款价</span><b>¥1680</b><em>不含税</em></div>
+            <div class="price-line subtle"><span>最低出货价</span><b>¥1880</b></div>
+            <div class="price-line"><span>官方指定零售价</span><b>¥3280</b></div>
+          </div>
+        </div>
+      </article>
+      <article class="product-card" id="product-4">
+        <div class="product-image-wrap">
+          <span class="product-index">#04</span>
+          <img src="assets/products/product-row-6.jpg" alt="13500尼龙普通款">
+        </div>
+        <div class="product-body">
+          <div class="product-kicker">X-BVLL RECOVERY SYSTEM</div>
+          <h3>13500尼龙普通款</h3>
+          <p>13500LBS 尼龙绳车载绞盘拉力 13500LBS（6123kgs）</p>
+          <div class="tag-row"><span>彩盒</span></div>
+          <div class="price-board">
+            <div class="price-line primary"><span>经销商打款价</span><b>¥1780</b><em>不含税</em></div>
+            <div class="price-line subtle"><span>最低出货价</span><b>¥1980</b></div>
+            <div class="price-line"><span>官方指定零售价</span><b>¥3380</b></div>
+          </div>
+        </div>
+      </article>
+      <article class="product-card" id="product-5">
+        <div class="product-image-wrap">
+          <span class="product-index">#05</span>
+          <img src="assets/products/product-row-7.jpg" alt="第四代脱困板">
+        </div>
+        <div class="product-body">
+          <div class="product-kicker">X-BVLL RECOVERY SYSTEM</div>
+          <h3>第四代脱困板</h3>
+          <p>尼龙混合材质，独家专利，目前市场占有率最高</p>
+          <div class="tag-row"><span>品牌布包+纸箱包装</span><span>起订量 3</span></div>
+          <div class="price-board">
+            <div class="price-line primary"><span>经销商打款价</span><b>¥180</b><em>不含税</em></div>
+            
+            <div class="price-line"><span>官方指定零售价</span><b>¥398</b></div>
+          </div>
+        </div>
+      </article>
+      <article class="product-card" id="product-6">
+        <div class="product-image-wrap">
+          <span class="product-index">#06</span>
+          <img src="assets/products/product-row-8.jpg" alt="第五代脱困板">
+        </div>
+        <div class="product-body">
+          <div class="product-kicker">X-BVLL RECOVERY SYSTEM</div>
+          <h3>第五代脱困板</h3>
+          <p>尼龙混合材质，独家专利</p>
+          <div class="tag-row"><span>品牌布包+纸箱包装</span><span>起订量 3</span></div>
+          <div class="price-board">
+            <div class="price-line primary"><span>经销商打款价</span><b>¥200</b><em>不含税</em></div>
+            
+            <div class="price-line"><span>官方指定零售价</span><b>¥588</b></div>
+          </div>
+        </div>
+      </article>
+      <article class="product-card" id="product-7">
+        <div class="product-image-wrap">
+          <span class="product-index">#07</span>
+          <img src="assets/products/product-row-9.jpg" alt="10*26绞盘绳">
+        </div>
+        <div class="product-body">
+          <div class="product-kicker">X-BVLL RECOVERY SYSTEM</div>
+          <h3>10*26绞盘绳</h3>
+          <p>10*26绞盘绳</p>
+          <div class="tag-row"><span>品牌纸箱包装</span><span>起订量 6</span></div>
+          <div class="price-board">
+            <div class="price-line primary"><span>经销商打款价</span><b>¥268</b><em>不含税</em></div>
+            
+            <div class="price-line"><span>官方指定零售价</span><b>¥568</b></div>
+          </div>
+        </div>
+      </article>
+      <article class="product-card" id="product-8">
+        <div class="product-image-wrap">
+          <span class="product-index">#08</span>
+          <img src="assets/products/product-row-10.jpg" alt="22MM*9M 弹力绳">
+        </div>
+        <div class="product-body">
+          <div class="product-kicker">X-BVLL RECOVERY SYSTEM</div>
+          <h3>22MM*9M 弹力绳</h3>
+          <p>22*9 弹力绳 最大拉力12T</p>
+          <div class="tag-row"><span>带包单独包装</span><span>起订量 3</span></div>
+          <div class="price-board">
+            <div class="price-line primary"><span>经销商打款价</span><b>¥288</b><em>不含税</em></div>
+            
+            <div class="price-line"><span>官方指定零售价</span><b>¥598</b></div>
+          </div>
+        </div>
+      </article>
+      <article class="product-card" id="product-9">
+        <div class="product-image-wrap">
+          <span class="product-index">#09</span>
+          <img src="assets/products/product-row-11.jpg" alt="新款脱困组套">
+        </div>
+        <div class="product-body">
+          <div class="product-kicker">X-BVLL RECOVERY SYSTEM</div>
+          <h3>新款脱困组套</h3>
+          <p>22*9弹力绳+8T抱树带+手套+软扣+栏旗+手提包</p>
+          <div class="tag-row"><span>纸箱包装</span><span>起订量 3</span></div>
+          <div class="price-board">
+            <div class="price-line primary"><span>经销商打款价</span><b>¥498</b><em>不含税</em></div>
+            
+            <div class="price-line"><span>官方指定零售价</span><b>¥880</b></div>
+          </div>
+        </div>
+      </article>
+      <article class="product-card" id="product-10">
+        <div class="product-image-wrap">
+          <span class="product-index">#10</span>
+          <img src="assets/products/product-row-12.jpg" alt="4.75T 新款卸扣套装">
+        </div>
+        <div class="product-body">
+          <div class="product-kicker">X-BVLL RECOVERY SYSTEM</div>
+          <h3>4.75T 新款卸扣套装</h3>
+          <p>额定拉力4.75T 破断拉力10.8T</p>
+          <div class="tag-row"><span>彩盒包装</span><span>起订量 8</span></div>
+          <div class="price-board">
+            <div class="price-line primary"><span>经销商打款价</span><b>¥138</b><em>不含税</em></div>
+            
+            <div class="price-line"><span>官方指定零售价</span><b>¥278</b></div>
+          </div>
+        </div>
+      </article>
+      <article class="product-card" id="product-11">
+        <div class="product-image-wrap">
+          <span class="product-index">#11</span>
+          <img src="assets/products/product-row-13.jpg" alt="新款拖车连接器套装">
+        </div>
+        <div class="product-body">
+          <div class="product-kicker">X-BVLL RECOVERY SYSTEM</div>
+          <h3>新款拖车连接器套装</h3>
+          <p>额定拉力4.75T 破断拉力10.8T</p>
+          <div class="tag-row"><span>彩盒包装</span><span>起订量 8</span></div>
+          <div class="price-board">
+            <div class="price-line primary"><span>经销商打款价</span><b>¥152</b><em>不含税</em></div>
+            
+            <div class="price-line"><span>官方指定零售价</span><b>¥308</b></div>
+          </div>
+        </div>
+      </article>
+      <article class="product-card" id="product-12">
+        <div class="product-image-wrap">
+          <span class="product-index">#12</span>
+          <img src="assets/products/product-row-14.jpg" alt="一体式导绳器">
+        </div>
+        <div class="product-body">
+          <div class="product-kicker">X-BVLL RECOVERY SYSTEM</div>
+          <h3>一体式导绳器</h3>
+          <p>含磁铁，可吸附</p>
+          <div class="tag-row"><span>彩盒包装</span><span>起订量 8</span></div>
+          <div class="price-board">
+            <div class="price-line primary"><span>经销商打款价</span><b>¥330</b><em>不含税</em></div>
+            <div class="price-line subtle"><span>最低出货价</span><b>¥380</b></div>
+            <div class="price-line"><span>官方指定零售价</span><b>¥880</b></div>
+          </div>
+        </div>
+      </article>
+      <article class="product-card" id="product-13">
+        <div class="product-image-wrap">
+          <span class="product-index">#13</span>
+          <img src="assets/products/product-row-15.jpg" alt="软卸扣">
+        </div>
+        <div class="product-body">
+          <div class="product-kicker">X-BVLL RECOVERY SYSTEM</div>
+          <h3>软卸扣</h3>
+          <p>55*12CM 尼龙材质，重量轻.拉力12T</p>
+          <div class="tag-row"><span>袋子包装</span><span>起订量 10</span></div>
+          <div class="price-board">
+            <div class="price-line primary"><span>经销商打款价</span><b>¥68</b><em>不含税</em></div>
+            
+            <div class="price-line"><span>官方指定零售价</span><b>¥128</b></div>
+          </div>
+        </div>
+      </article>
+      </div>
+    </section>
+
+    <section class="section" id="lighting">
+      <div class="section-head">
+        <div>
+          <div class="section-code">LIGHTING WHOLESALE TABLE</div>
+          <h2>越野灯具批发价</h2>
+        </div>
+        <p>原始 PDF 是一张图片型超长批发表，网页按分类裁切展示，点击任意裁片可打开高清图查看价格和参数细节。</p>
+      </div>
+      <div class="lighting-layout">
+        <div class="lighting-note">
+          <p>为避免小字 OCR 识别错误，灯具价格不重新录入，直接展示原始 PDF 高清裁片；代理查看时可点击裁片放大。</p>
+          <a href="assets/pdf-lighting/lighting-full-reference.jpg" target="_blank" rel="noopener">查看完整原始长图</a>
+        </div>
+        <div class="lighting-grid">
+          
+      <article class="lighting-card">
+        <div class="lighting-head">
+          <span>LIGHTING SECTION 01</span>
+          <h3>射灯/工作灯</h3>
+          <a href="assets/pdf-lighting/lighting-section-01.jpg" target="_blank" rel="noopener">打开大图</a>
+        </div>
+        <a class="lighting-image" href="assets/pdf-lighting/lighting-section-01.jpg" target="_blank" rel="noopener" aria-label="打开射灯/工作灯高清裁片">
+          <img src="assets/pdf-lighting/lighting-section-01.jpg" alt="射灯/工作灯批发价裁片">
+        </a>
+      </article>
+      <article class="lighting-card">
+        <div class="lighting-head">
+          <span>LIGHTING SECTION 02</span>
+          <h3>方形工作灯</h3>
+          <a href="assets/pdf-lighting/lighting-section-02.jpg" target="_blank" rel="noopener">打开大图</a>
+        </div>
+        <a class="lighting-image" href="assets/pdf-lighting/lighting-section-02.jpg" target="_blank" rel="noopener" aria-label="打开方形工作灯高清裁片">
+          <img src="assets/pdf-lighting/lighting-section-02.jpg" alt="方形工作灯批发价裁片">
+        </a>
+      </article>
+      <article class="lighting-card">
+        <div class="lighting-head">
+          <span>LIGHTING SECTION 03</span>
+          <h3>圆形辅助灯</h3>
+          <a href="assets/pdf-lighting/lighting-section-03.jpg" target="_blank" rel="noopener">打开大图</a>
+        </div>
+        <a class="lighting-image" href="assets/pdf-lighting/lighting-section-03.jpg" target="_blank" rel="noopener" aria-label="打开圆形辅助灯高清裁片">
+          <img src="assets/pdf-lighting/lighting-section-03.jpg" alt="圆形辅助灯批发价裁片">
+        </a>
+      </article>
+      <article class="lighting-card">
+        <div class="lighting-head">
+          <span>LIGHTING SECTION 04</span>
+          <h3>日行灯/装饰灯</h3>
+          <a href="assets/pdf-lighting/lighting-section-04.jpg" target="_blank" rel="noopener">打开大图</a>
+        </div>
+        <a class="lighting-image" href="assets/pdf-lighting/lighting-section-04.jpg" target="_blank" rel="noopener" aria-label="打开日行灯/装饰灯高清裁片">
+          <img src="assets/pdf-lighting/lighting-section-04.jpg" alt="日行灯/装饰灯批发价裁片">
+        </a>
+      </article>
+      <article class="lighting-card">
+        <div class="lighting-head">
+          <span>LIGHTING SECTION 05</span>
+          <h3>LED灯条</h3>
+          <a href="assets/pdf-lighting/lighting-section-05.jpg" target="_blank" rel="noopener">打开大图</a>
+        </div>
+        <a class="lighting-image" href="assets/pdf-lighting/lighting-section-05.jpg" target="_blank" rel="noopener" aria-label="打开LED灯条高清裁片">
+          <img src="assets/pdf-lighting/lighting-section-05.jpg" alt="LED灯条批发价裁片">
+        </a>
+      </article>
+      <article class="lighting-card">
+        <div class="lighting-head">
+          <span>LIGHTING SECTION 06</span>
+          <h3>长条射灯</h3>
+          <a href="assets/pdf-lighting/lighting-section-06.jpg" target="_blank" rel="noopener">打开大图</a>
+        </div>
+        <a class="lighting-image" href="assets/pdf-lighting/lighting-section-06.jpg" target="_blank" rel="noopener" aria-label="打开长条射灯高清裁片">
+          <img src="assets/pdf-lighting/lighting-section-06.jpg" alt="长条射灯批发价裁片">
+        </a>
+      </article>
+      <article class="lighting-card">
+        <div class="lighting-head">
+          <span>LIGHTING SECTION 07</span>
+          <h3>改装灯具补充</h3>
+          <a href="assets/pdf-lighting/lighting-section-07.jpg" target="_blank" rel="noopener">打开大图</a>
+        </div>
+        <a class="lighting-image" href="assets/pdf-lighting/lighting-section-07.jpg" target="_blank" rel="noopener" aria-label="打开改装灯具补充高清裁片">
+          <img src="assets/pdf-lighting/lighting-section-07.jpg" alt="改装灯具补充批发价裁片">
+        </a>
+      </article>
+      <article class="lighting-card">
+        <div class="lighting-head">
+          <span>LIGHTING SECTION 08</span>
+          <h3>灯具批发价补充</h3>
+          <a href="assets/pdf-lighting/lighting-section-08.jpg" target="_blank" rel="noopener">打开大图</a>
+        </div>
+        <a class="lighting-image" href="assets/pdf-lighting/lighting-section-08.jpg" target="_blank" rel="noopener" aria-label="打开灯具批发价补充高清裁片">
+          <img src="assets/pdf-lighting/lighting-section-08.jpg" alt="灯具批发价补充批发价裁片">
+        </a>
+      </article>
+      <article class="lighting-card">
+        <div class="lighting-head">
+          <span>LIGHTING SECTION 09</span>
+          <h3>灯具分类 9</h3>
+          <a href="assets/pdf-lighting/lighting-section-09.jpg" target="_blank" rel="noopener">打开大图</a>
+        </div>
+        <a class="lighting-image" href="assets/pdf-lighting/lighting-section-09.jpg" target="_blank" rel="noopener" aria-label="打开灯具分类 9高清裁片">
+          <img src="assets/pdf-lighting/lighting-section-09.jpg" alt="灯具分类 9批发价裁片">
+        </a>
+      </article>
+      <article class="lighting-card">
+        <div class="lighting-head">
+          <span>LIGHTING SECTION 10</span>
+          <h3>灯具分类 10</h3>
+          <a href="assets/pdf-lighting/lighting-section-10.jpg" target="_blank" rel="noopener">打开大图</a>
+        </div>
+        <a class="lighting-image" href="assets/pdf-lighting/lighting-section-10.jpg" target="_blank" rel="noopener" aria-label="打开灯具分类 10高清裁片">
+          <img src="assets/pdf-lighting/lighting-section-10.jpg" alt="灯具分类 10批发价裁片">
+        </a>
+      </article>
         </div>
       </div>
     </section>
 
-    <section class="showcase" id="system">
-      <div class="section-inner showcase-grid">
+    <section class="section" id="notes">
+      <div class="section-head">
         <div>
-          <figure class="focus-frame">
-            <img id="focusImage" src="assets/front-stance.png" alt="212 骑士前杠正面姿态">
-            <figcaption class="focus-label" id="focusLabel">前杠正面姿态</figcaption>
-          </figure>
-          <div class="thumb-strip" aria-label="切换产品视角">
-            <button class="thumb active" type="button" data-image="assets/front-stance.png" data-label="前杠正面姿态"><img src="assets/front-stance.png" alt=""></button>
-            <button class="thumb" type="button" data-image="assets/angle-profile.png" data-label="侧前方整车比例"><img src="assets/angle-profile.png" alt=""></button>
-            <button class="thumb" type="button" data-image="assets/studio-side.png" data-label="车身侧面涂装"><img src="assets/studio-side.png" alt=""></button>
-            <button class="thumb" type="button" data-image="assets/hero-side.png" data-label="低位侧面姿态"><img src="assets/hero-side.png" alt=""></button>
-          </div>
+          <div class="section-code">DEALER NOTES</div>
+          <h2>合作与价格备注</h2>
         </div>
-
-        <aside class="detail-panel">
-          <p class="kicker">Intelligent front bumper</p>
-          <h2>功能层次清晰，视觉足够克制</h2>
-          <ul class="detail-list">
-            <li>蜂窝通风设计，保留硬派机械感，同时弱化大面积金属件的厚重感。</li>
-            <li>灯具、牌照、绞盘与拖挂点整合在同一视觉轴线，前脸更有秩序。</li>
-            <li>黑色结构件与黄色车身形成强烈对比，适合门店海报、短视频封面和线上详情页。</li>
-            <li>兼顾展示感和实用感，适合面向越野玩家、改装门店和俱乐部客户。</li>
+        <p>页面为公开代理目录，价格口径以源 Excel 和 PDF 批发价表为准。</p>
+      </div>
+      <div class="remarks">
+        <div class="remark-panel">
+          <h3>价格体系说明</h3>
+          <ul>
+            <li>经销商打款价为不含税价，含税需另加税点。</li>
+            <li>绞盘未达到起订数量不包邮，物流到付。</li>
+            <li>附件未达到起订量不包邮，运费到付。</li>
+            <li>为维护整体价格体系，严禁低于官方指定零售价销售。</li>
           </ul>
-        </aside>
-      </div>
-    </section>
-
-    <section class="spec-band">
-      <div class="section-inner spec-layout">
-        <div class="spec-copy">
-          <div>
-            <p class="kicker">Engineering view</p>
-            <h2>一张图看懂前杠系统</h2>
-            <p>前杠不是单一外观件，而是由防护结构、散热开孔、绞盘安装位、拖挂点与整车适配共同组成的系统。</p>
-          </div>
-          <div class="mini-metrics">
-            <div class="metric">
-              <strong>防护</strong>
-              <span>强化前部关键区域</span>
-            </div>
-            <div class="metric">
-              <strong>救援</strong>
-              <span>绞盘与拖挂拓展</span>
-            </div>
-            <div class="metric">
-              <strong>散热</strong>
-              <span>蜂窝式通风布局</span>
-            </div>
-            <div class="metric">
-              <strong>姿态</strong>
-              <span>专车比例完整呈现</span>
-            </div>
-          </div>
         </div>
-        <figure class="spec-image">
-          <img src="assets/bumper-spec.png" alt="雷麦科技 212 骑士智能前杠系统详情图" loading="lazy">
-        </figure>
-      </div>
-    </section>
-
-    <section id="gallery">
-      <div class="section-inner">
-        <div class="section-head">
-          <div>
-            <p class="kicker">Studio gallery</p>
-            <h2>暗场光影下的硬派质感</h2>
-          </div>
-          <p class="section-copy">亮黄色车身、黑色结构件、金属轮毂和车间灯光共同形成记忆点，适合用于品牌门店屏幕、招商页面和朋友圈海报延展。</p>
-        </div>
-
-        <div class="gallery-grid">
-          <figure class="gallery-item wide"><img src="assets/angle-profile.png" alt="黄色 212 骑士侧前方展示" loading="lazy"></figure>
-          <figure class="gallery-item"><img src="assets/hero-side.png" alt="黄色 212 骑士侧面展示" loading="lazy"></figure>
-          <figure class="gallery-item"><img src="assets/studio-side.png" alt="黄色 212 骑士车身涂装展示" loading="lazy"></figure>
-          <figure class="gallery-item wide"><img src="assets/front-stance.png" alt="黄色 212 骑士前杠展示" loading="lazy"></figure>
+        <div class="contact-card">
+          <strong>BUILT FOR 212<br>READY FOR DEALERS</strong>
+          <span>产品图、参数、代理价与零售价集中展示，适合直接发送给代理查看。</span>
         </div>
       </div>
     </section>
-
-    <section class="closing" id="contact">
-      <div class="section-inner">
-        <div class="closing-content">
-          <p class="kicker">Built to protect</p>
-          <h2>让 212 骑士拥有更完整的越野面孔</h2>
-          <p>从前杠开始，建立一套有力量、有秩序、可拓展的整车改装语言。适合展示、交付、俱乐部活动与高端越野玩家定制。</p>
-          <div class="hero-actions">
-            <button class="button primary" type="button" onclick="window.print()">打印 / 导出页面</button>
-            <a class="button ghost" href="#top">返回顶部</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer class="footer">
-      <span>Leimai Tech LM-212 Off-road Front Bumper System</span>
-      <span>Designed for adventure · Engineered for extremes</span>
-    </footer>
   </main>
 
-  <script>
-    const focusImage = document.querySelector("#focusImage");
-    const focusLabel = document.querySelector("#focusLabel");
-    const thumbs = document.querySelectorAll(".thumb");
-
-    thumbs.forEach((thumb) => {
-      thumb.addEventListener("click", () => {
-        thumbs.forEach((item) => item.classList.remove("active"));
-        thumb.classList.add("active");
-        focusImage.src = thumb.dataset.image;
-        focusLabel.textContent = thumb.dataset.label;
-      });
-    });
-  </script>
+  <footer>
+    212 越野改装代理产品目录 · GitHub Pages 在线版本 · 价格信息来自用户提供的 PDF 与 Excel 源文件
+  </footer>
 </body>
 </html>

@@ -1,0 +1,200 @@
+{
+  "products": [
+    {
+      "seq": "1",
+      "name": "12000尼龙TT款",
+      "image": "assets/products/product-row-3.jpg",
+      "params": "12000LBS 尼龙绳车载绞盘拉力 12000LBS（5443kgs）",
+      "package": "彩盒",
+      "dealerPay": "2880",
+      "minSale": "3580",
+      "official": "5580",
+      "moq": ""
+    },
+    {
+      "seq": "2",
+      "name": "12000尼龙BJ款",
+      "image": "assets/products/product-row-4.jpg",
+      "params": "12000LBS 尼龙绳车载绞盘拉力 12000LBS（5443kgs）",
+      "package": "彩盒",
+      "dealerPay": "2380",
+      "minSale": "2780",
+      "official": "3980",
+      "moq": ""
+    },
+    {
+      "seq": "3",
+      "name": "12000尼龙普通款",
+      "image": "assets/products/product-row-5.jpg",
+      "params": "12000LBS 尼龙绳车载绞盘拉力 12000LBS（5443kgs）",
+      "package": "彩盒",
+      "dealerPay": "1680",
+      "minSale": "1880",
+      "official": "3280",
+      "moq": ""
+    },
+    {
+      "seq": "4",
+      "name": "13500尼龙普通款",
+      "image": "assets/products/product-row-6.jpg",
+      "params": "13500LBS 尼龙绳车载绞盘拉力 13500LBS（6123kgs）",
+      "package": "彩盒",
+      "dealerPay": "1780",
+      "minSale": "1980",
+      "official": "3380",
+      "moq": ""
+    },
+    {
+      "seq": "5",
+      "name": "第四代脱困板",
+      "image": "assets/products/product-row-7.jpg",
+      "params": "尼龙混合材质，独家专利，目前市场占有率最高",
+      "package": "品牌布包+纸箱包装",
+      "dealerPay": "180",
+      "minSale": "",
+      "official": "398",
+      "moq": "3"
+    },
+    {
+      "seq": "6",
+      "name": "第五代脱困板",
+      "image": "assets/products/product-row-8.jpg",
+      "params": "尼龙混合材质，独家专利",
+      "package": "品牌布包+纸箱包装",
+      "dealerPay": "200",
+      "minSale": "",
+      "official": "588",
+      "moq": "3"
+    },
+    {
+      "seq": "7",
+      "name": "10*26绞盘绳",
+      "image": "assets/products/product-row-9.jpg",
+      "params": "10*26绞盘绳",
+      "package": "品牌纸箱包装",
+      "dealerPay": "268",
+      "minSale": "",
+      "official": "568",
+      "moq": "6"
+    },
+    {
+      "seq": "8",
+      "name": "22MM*9M 弹力绳",
+      "image": "assets/products/product-row-10.jpg",
+      "params": "22*9 弹力绳 最大拉力12T",
+      "package": "带包单独包装",
+      "dealerPay": "288",
+      "minSale": "",
+      "official": "598",
+      "moq": "3"
+    },
+    {
+      "seq": "9",
+      "name": "新款脱困组套",
+      "image": "assets/products/product-row-11.jpg",
+      "params": "22*9弹力绳+8T抱树带+手套+软扣+栏旗+手提包",
+      "package": "纸箱包装",
+      "dealerPay": "498",
+      "minSale": "",
+      "official": "880",
+      "moq": "3"
+    },
+    {
+      "seq": "10",
+      "name": "4.75T 新款卸扣套装",
+      "image": "assets/products/product-row-12.jpg",
+      "params": "额定拉力4.75T 破断拉力10.8T",
+      "package": "彩盒包装",
+      "dealerPay": "138",
+      "minSale": "",
+      "official": "278",
+      "moq": "8"
+    },
+    {
+      "seq": "11",
+      "name": "新款拖车连接器套装",
+      "image": "assets/products/product-row-13.jpg",
+      "params": "额定拉力4.75T 破断拉力10.8T",
+      "package": "彩盒包装",
+      "dealerPay": "152",
+      "minSale": "",
+      "official": "308",
+      "moq": "8"
+    },
+    {
+      "seq": "12",
+      "name": "一体式导绳器",
+      "image": "assets/products/product-row-14.jpg",
+      "params": "含磁铁，可吸附",
+      "package": "彩盒包装",
+      "dealerPay": "330",
+      "minSale": "380",
+      "official": "880",
+      "moq": "8"
+    },
+    {
+      "seq": "13",
+      "name": "软卸扣",
+      "image": "assets/products/product-row-15.jpg",
+      "params": "55*12CM 尼龙材质，重量轻.拉力12T",
+      "package": "袋子包装",
+      "dealerPay": "68",
+      "minSale": "",
+      "official": "128",
+      "moq": "10"
+    }
+  ],
+  "lightingSections": [
+    {
+      "title": "射灯/工作灯",
+      "image": "assets/pdf-lighting/lighting-section-01.jpg",
+      "height": 2034
+    },
+    {
+      "title": "方形工作灯",
+      "image": "assets/pdf-lighting/lighting-section-02.jpg",
+      "height": 1220
+    },
+    {
+      "title": "圆形辅助灯",
+      "image": "assets/pdf-lighting/lighting-section-03.jpg",
+      "height": 420
+    },
+    {
+      "title": "日行灯/装饰灯",
+      "image": "assets/pdf-lighting/lighting-section-04.jpg",
+      "height": 2943
+    },
+    {
+      "title": "LED灯条",
+      "image": "assets/pdf-lighting/lighting-section-05.jpg",
+      "height": 902
+    },
+    {
+      "title": "长条射灯",
+      "image": "assets/pdf-lighting/lighting-section-06.jpg",
+      "height": 1192
+    },
+    {
+      "title": "改装灯具补充",
+      "image": "assets/pdf-lighting/lighting-section-07.jpg",
+      "height": 1752
+    },
+    {
+      "title": "灯具批发价补充",
+      "image": "assets/pdf-lighting/lighting-section-08.jpg",
+      "height": 711
+    },
+    {
+      "title": "灯具分类 9",
+      "image": "assets/pdf-lighting/lighting-section-09.jpg",
+      "height": 715
+    },
+    {
+      "title": "灯具分类 10",
+      "image": "assets/pdf-lighting/lighting-section-10.jpg",
+      "height": 738
+    }
+  ],
+  "fullLighting": "assets/pdf-lighting/lighting-full-reference.jpg"
+}
