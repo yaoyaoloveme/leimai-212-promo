@@ -196,5 +196,506 @@
       "height": 738
     }
   ],
-  "fullLighting": "assets/pdf-lighting/lighting-full-reference.jpg"
+  "fullLighting": "assets/pdf-lighting/lighting-full-reference.jpg",
+  "excelPosters": [
+    {
+      "seq": "1",
+      "name": "12000尼龙TT款",
+      "poster": "assets/posters/xbvll/xbvll-01.jpg"
+    },
+    {
+      "seq": "2",
+      "name": "12000尼龙BJ款",
+      "poster": "assets/posters/xbvll/xbvll-02.jpg"
+    },
+    {
+      "seq": "3",
+      "name": "12000尼龙普通款",
+      "poster": "assets/posters/xbvll/xbvll-03.jpg"
+    },
+    {
+      "seq": "4",
+      "name": "13500尼龙普通款",
+      "poster": "assets/posters/xbvll/xbvll-04.jpg"
+    },
+    {
+      "seq": "5",
+      "name": "第四代脱困板",
+      "poster": "assets/posters/xbvll/xbvll-05.jpg"
+    },
+    {
+      "seq": "6",
+      "name": "第五代脱困板",
+      "poster": "assets/posters/xbvll/xbvll-06.jpg"
+    },
+    {
+      "seq": "7",
+      "name": "10*26绞盘绳",
+      "poster": "assets/posters/xbvll/xbvll-07.jpg"
+    },
+    {
+      "seq": "8",
+      "name": "22MM*9M 弹力绳",
+      "poster": "assets/posters/xbvll/xbvll-08.jpg"
+    },
+    {
+      "seq": "9",
+      "name": "新款脱困组套",
+      "poster": "assets/posters/xbvll/xbvll-09.jpg"
+    },
+    {
+      "seq": "10",
+      "name": "4.75T 新款卸扣套装",
+      "poster": "assets/posters/xbvll/xbvll-10.jpg"
+    },
+    {
+      "seq": "11",
+      "name": "新款拖车连接器套装",
+      "poster": "assets/posters/xbvll/xbvll-11.jpg"
+    },
+    {
+      "seq": "12",
+      "name": "一体式导绳器",
+      "poster": "assets/posters/xbvll/xbvll-12.jpg"
+    },
+    {
+      "seq": "13",
+      "name": "软卸扣",
+      "poster": "assets/posters/xbvll/xbvll-13.jpg"
+    }
+  ],
+  "pdfPosters": [
+    {
+      "seq": 1,
+      "name": "越野灯具单品 01",
+      "poster": "assets/posters/lighting/lighting-001.jpg",
+      "sourceY": [
+        118,
+        234
+      ]
+    },
+    {
+      "seq": 2,
+      "name": "越野灯具单品 02",
+      "poster": "assets/posters/lighting/lighting-002.jpg",
+      "sourceY": [
+        234,
+        407
+      ]
+    },
+    {
+      "seq": 3,
+      "name": "越野灯具单品 03",
+      "poster": "assets/posters/lighting/lighting-003.jpg",
+      "sourceY": [
+        407,
+        499
+      ]
+    },
+    {
+      "seq": 4,
+      "name": "越野灯具单品 04",
+      "poster": "assets/posters/lighting/lighting-004.jpg",
+      "sourceY": [
+        499,
+        671
+      ]
+    },
+    {
+      "seq": 5,
+      "name": "越野灯具单品 05",
+      "poster": "assets/posters/lighting/lighting-005.jpg",
+      "sourceY": [
+        671,
+        857
+      ]
+    },
+    {
+      "seq": 6,
+      "name": "越野灯具单品 06",
+      "poster": "assets/posters/lighting/lighting-006.jpg",
+      "sourceY": [
+        926,
+        1062
+      ]
+    },
+    {
+      "seq": 7,
+      "name": "越野灯具单品 07",
+      "poster": "assets/posters/lighting/lighting-007.jpg",
+      "sourceY": [
+        1062,
+        1159
+      ]
+    },
+    {
+      "seq": 8,
+      "name": "越野灯具单品 08",
+      "poster": "assets/posters/lighting/lighting-008.jpg",
+      "sourceY": [
+        1159,
+        1475
+      ]
+    },
+    {
+      "seq": 9,
+      "name": "越野灯具单品 09",
+      "poster": "assets/posters/lighting/lighting-009.jpg",
+      "sourceY": [
+        1475,
+        1697
+      ]
+    },
+    {
+      "seq": 10,
+      "name": "越野灯具单品 10",
+      "poster": "assets/posters/lighting/lighting-010.jpg",
+      "sourceY": [
+        1757,
+        2069
+      ]
+    },
+    {
+      "seq": 11,
+      "name": "越野灯具单品 11",
+      "poster": "assets/posters/lighting/lighting-011.jpg",
+      "sourceY": [
+        2069,
+        2399
+      ]
+    },
+    {
+      "seq": 12,
+      "name": "越野灯具单品 12",
+      "poster": "assets/posters/lighting/lighting-012.jpg",
+      "sourceY": [
+        2399,
+        2681
+      ]
+    },
+    {
+      "seq": 13,
+      "name": "越野灯具单品 13",
+      "poster": "assets/posters/lighting/lighting-013.jpg",
+      "sourceY": [
+        2832,
+        2957
+      ]
+    },
+    {
+      "seq": 14,
+      "name": "越野灯具单品 14",
+      "poster": "assets/posters/lighting/lighting-014.jpg",
+      "sourceY": [
+        3090,
+        3277
+      ]
+    },
+    {
+      "seq": 15,
+      "name": "越野灯具单品 15",
+      "poster": "assets/posters/lighting/lighting-015.jpg",
+      "sourceY": [
+        3489,
+        3599
+      ]
+    },
+    {
+      "seq": 16,
+      "name": "越野灯具单品 16",
+      "poster": "assets/posters/lighting/lighting-016.jpg",
+      "sourceY": [
+        3685,
+        3838
+      ]
+    },
+    {
+      "seq": 17,
+      "name": "越野灯具单品 17",
+      "poster": "assets/posters/lighting/lighting-017.jpg",
+      "sourceY": [
+        3838,
+        4009
+      ]
+    },
+    {
+      "seq": 18,
+      "name": "越野灯具单品 18",
+      "poster": "assets/posters/lighting/lighting-018.jpg",
+      "sourceY": [
+        4009,
+        4127
+      ]
+    },
+    {
+      "seq": 19,
+      "name": "越野灯具单品 19",
+      "poster": "assets/posters/lighting/lighting-019.jpg",
+      "sourceY": [
+        4127,
+        4289
+      ]
+    },
+    {
+      "seq": 20,
+      "name": "越野灯具单品 20",
+      "poster": "assets/posters/lighting/lighting-020.jpg",
+      "sourceY": [
+        4289,
+        4574
+      ]
+    },
+    {
+      "seq": 21,
+      "name": "越野灯具单品 21",
+      "poster": "assets/posters/lighting/lighting-021.jpg",
+      "sourceY": [
+        4574,
+        4697
+      ]
+    },
+    {
+      "seq": 22,
+      "name": "越野灯具单品 22",
+      "poster": "assets/posters/lighting/lighting-022.jpg",
+      "sourceY": [
+        4697,
+        4822
+      ]
+    },
+    {
+      "seq": 23,
+      "name": "越野灯具单品 23",
+      "poster": "assets/posters/lighting/lighting-023.jpg",
+      "sourceY": [
+        4822,
+        4980
+      ]
+    },
+    {
+      "seq": 24,
+      "name": "越野灯具单品 24",
+      "poster": "assets/posters/lighting/lighting-024.jpg",
+      "sourceY": [
+        4980,
+        5124
+      ]
+    },
+    {
+      "seq": 25,
+      "name": "越野灯具单品 25",
+      "poster": "assets/posters/lighting/lighting-025.jpg",
+      "sourceY": [
+        5124,
+        5425
+      ]
+    },
+    {
+      "seq": 26,
+      "name": "越野灯具单品 26",
+      "poster": "assets/posters/lighting/lighting-026.jpg",
+      "sourceY": [
+        5425,
+        5715
+      ]
+    },
+    {
+      "seq": 27,
+      "name": "越野灯具单品 27",
+      "poster": "assets/posters/lighting/lighting-027.jpg",
+      "sourceY": [
+        6755,
+        6845
+      ]
+    },
+    {
+      "seq": 28,
+      "name": "越野灯具单品 28",
+      "poster": "assets/posters/lighting/lighting-028.jpg",
+      "sourceY": [
+        7072,
+        7194
+      ]
+    },
+    {
+      "seq": 29,
+      "name": "越野灯具单品 29",
+      "poster": "assets/posters/lighting/lighting-029.jpg",
+      "sourceY": [
+        7350,
+        7506
+      ]
+    },
+    {
+      "seq": 30,
+      "name": "越野灯具单品 30",
+      "poster": "assets/posters/lighting/lighting-030.jpg",
+      "sourceY": [
+        7506,
+        7809
+      ]
+    },
+    {
+      "seq": 31,
+      "name": "越野灯具单品 31",
+      "poster": "assets/posters/lighting/lighting-031.jpg",
+      "sourceY": [
+        7889,
+        8094
+      ]
+    },
+    {
+      "seq": 32,
+      "name": "越野灯具单品 32",
+      "poster": "assets/posters/lighting/lighting-032.jpg",
+      "sourceY": [
+        8201,
+        8377
+      ]
+    },
+    {
+      "seq": 33,
+      "name": "越野灯具单品 33",
+      "poster": "assets/posters/lighting/lighting-033.jpg",
+      "sourceY": [
+        8580,
+        8686
+      ]
+    },
+    {
+      "seq": 34,
+      "name": "越野灯具单品 34",
+      "poster": "assets/posters/lighting/lighting-034.jpg",
+      "sourceY": [
+        8686,
+        8790
+      ]
+    },
+    {
+      "seq": 35,
+      "name": "越野灯具单品 35",
+      "poster": "assets/posters/lighting/lighting-035.jpg",
+      "sourceY": [
+        8849,
+        8995
+      ]
+    },
+    {
+      "seq": 36,
+      "name": "越野灯具单品 36",
+      "poster": "assets/posters/lighting/lighting-036.jpg",
+      "sourceY": [
+        8995,
+        9089
+      ]
+    },
+    {
+      "seq": 37,
+      "name": "越野灯具单品 37",
+      "poster": "assets/posters/lighting/lighting-037.jpg",
+      "sourceY": [
+        9089,
+        9280
+      ]
+    },
+    {
+      "seq": 38,
+      "name": "越野灯具单品 38",
+      "poster": "assets/posters/lighting/lighting-038.jpg",
+      "sourceY": [
+        9413,
+        9565
+      ]
+    },
+    {
+      "seq": 39,
+      "name": "越野灯具单品 39",
+      "poster": "assets/posters/lighting/lighting-039.jpg",
+      "sourceY": [
+        9979,
+        10121
+      ]
+    },
+    {
+      "seq": 40,
+      "name": "越野灯具单品 40",
+      "poster": "assets/posters/lighting/lighting-040.jpg",
+      "sourceY": [
+        10295,
+        10420
+      ]
+    },
+    {
+      "seq": 41,
+      "name": "越野灯具单品 41",
+      "poster": "assets/posters/lighting/lighting-041.jpg",
+      "sourceY": [
+        10420,
+        10533
+      ]
+    },
+    {
+      "seq": 42,
+      "name": "越野灯具单品 42",
+      "poster": "assets/posters/lighting/lighting-042.jpg",
+      "sourceY": [
+        10622,
+        10734
+      ]
+    },
+    {
+      "seq": 43,
+      "name": "越野灯具单品 43",
+      "poster": "assets/posters/lighting/lighting-043.jpg",
+      "sourceY": [
+        10734,
+        10826
+      ]
+    },
+    {
+      "seq": 44,
+      "name": "越野灯具单品 44",
+      "poster": "assets/posters/lighting/lighting-044.jpg",
+      "sourceY": [
+        11016,
+        11120
+      ]
+    },
+    {
+      "seq": 45,
+      "name": "越野灯具单品 45",
+      "poster": "assets/posters/lighting/lighting-045.jpg",
+      "sourceY": [
+        11120,
+        11353
+      ]
+    },
+    {
+      "seq": 46,
+      "name": "越野灯具单品 46",
+      "poster": "assets/posters/lighting/lighting-046.jpg",
+      "sourceY": [
+        11717,
+        11828
+      ]
+    },
+    {
+      "seq": 47,
+      "name": "越野灯具单品 47",
+      "poster": "assets/posters/lighting/lighting-047.jpg",
+      "sourceY": [
+        11828,
+        11931
+      ]
+    },
+    {
+      "seq": 48,
+      "name": "越野灯具单品 48",
+      "poster": "assets/posters/lighting/lighting-048.jpg",
+      "sourceY": [
+        12048,
+        12148
+      ]
+    }
+  ]
 }
