@@ -1,0 +1,983 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>雷麦科技 212 骑士智能前杠系统</title>
+  <meta name="description" content="雷麦科技 212 骑士智能前杠系统宣传页">
+  <style>
+    :root {
+      --bg: #060709;
+      --panel: #101216;
+      --panel-soft: #171a20;
+      --line: rgba(255, 255, 255, .13);
+      --text: #f5f2ea;
+      --muted: #a9adb6;
+      --gold: #f4b21f;
+      --gold-soft: #d58b22;
+      --cyan: #6ed8ff;
+      --steel: #c7ccd4;
+      --shadow: 0 28px 80px rgba(0, 0, 0, .46);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Inter", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+      letter-spacing: 0;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    p {
+      overflow-wrap: anywhere;
+    }
+
+    .site-shell {
+      min-height: 100vh;
+      overflow: hidden;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, .04), transparent 360px),
+        #060709;
+    }
+
+    .nav {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 22px clamp(20px, 4vw, 64px);
+      border-bottom: 1px solid rgba(255, 255, 255, .08);
+      background: rgba(6, 7, 9, .58);
+      backdrop-filter: blur(18px);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 30px;
+      border: 2px solid var(--cyan);
+      border-right-width: 9px;
+      transform: skewX(-14deg);
+      box-shadow: 0 0 22px rgba(110, 216, 255, .25);
+    }
+
+    .brand strong {
+      display: block;
+      font-size: 17px;
+      line-height: 1.1;
+      white-space: nowrap;
+    }
+
+    .brand span {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1;
+      text-transform: uppercase;
+      letter-spacing: .18em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: clamp(14px, 2vw, 32px);
+      color: rgba(245, 242, 234, .76);
+      font-size: 14px;
+    }
+
+    .nav-links a {
+      transition: color .2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 0 18px;
+      border: 1px solid rgba(244, 178, 31, .7);
+      border-radius: 4px;
+      background: rgba(244, 178, 31, .08);
+      color: #ffd98a;
+      font-weight: 700;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 88vh;
+      display: grid;
+      align-items: end;
+      padding: 132px clamp(20px, 4vw, 64px) 58px;
+      isolation: isolate;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background:
+        linear-gradient(90deg, rgba(6, 7, 9, .92) 0%, rgba(6, 7, 9, .58) 38%, rgba(6, 7, 9, .16) 70%),
+        linear-gradient(180deg, rgba(6, 7, 9, .16) 0%, rgba(6, 7, 9, .08) 48%, #060709 100%),
+        url("assets/front-stance.png") center / cover no-repeat;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 34%;
+      z-index: -1;
+      background: linear-gradient(180deg, transparent, #060709);
+    }
+
+    .hero-content {
+      width: min(760px, 100%);
+      min-width: 0;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #ffce63;
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .18em;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 42px;
+      height: 1px;
+      background: currentColor;
+    }
+
+    h1 {
+      margin: 22px 0 18px;
+      max-width: 720px;
+      font-size: clamp(48px, 8vw, 112px);
+      line-height: .88;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    h1 span + span {
+      margin-left: .08em;
+    }
+
+    .hero-subtitle {
+      max-width: 600px;
+      margin: 0;
+      color: rgba(245, 242, 234, .78);
+      font-size: clamp(17px, 1.8vw, 22px);
+      line-height: 1.7;
+      overflow-wrap: anywhere;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 34px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 0 22px;
+      border-radius: 4px;
+      border: 1px solid var(--line);
+      color: var(--text);
+      font-weight: 800;
+      transition: transform .2s ease, border-color .2s ease, background .2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button.primary {
+      border-color: transparent;
+      background: var(--gold);
+      color: #12100a;
+      box-shadow: 0 18px 42px rgba(244, 178, 31, .26);
+    }
+
+    button.button {
+      cursor: pointer;
+      font: inherit;
+    }
+
+    .button.ghost {
+      background: rgba(255, 255, 255, .06);
+    }
+
+    .quick-spec {
+      position: absolute;
+      right: clamp(20px, 4vw, 64px);
+      bottom: 48px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(86px, 1fr));
+      gap: 1px;
+      width: min(420px, calc(100% - 40px));
+      border: 1px solid rgba(255, 255, 255, .12);
+      background: rgba(255, 255, 255, .12);
+      box-shadow: var(--shadow);
+    }
+
+    .quick-spec div {
+      min-height: 88px;
+      padding: 18px;
+      background: rgba(7, 8, 11, .72);
+      backdrop-filter: blur(16px);
+    }
+
+    .quick-spec strong {
+      display: block;
+      color: var(--gold);
+      font-size: 25px;
+      line-height: 1;
+    }
+
+    .quick-spec span {
+      display: block;
+      margin-top: 10px;
+      color: rgba(245, 242, 234, .64);
+      font-size: 12px;
+      line-height: 1.35;
+    }
+
+    section {
+      position: relative;
+      padding: clamp(64px, 8vw, 118px) clamp(20px, 4vw, 64px);
+    }
+
+    .section-inner {
+      width: min(1180px, 100%);
+      margin: 0 auto;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 460px);
+      align-items: end;
+      gap: 34px;
+      margin-bottom: 34px;
+    }
+
+    .section-head > * {
+      min-width: 0;
+    }
+
+    .kicker {
+      margin: 0 0 12px;
+      color: var(--cyan);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(32px, 5vw, 68px);
+      line-height: .98;
+      letter-spacing: 0;
+    }
+
+    .section-copy {
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .feature {
+      min-height: 220px;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, .065), rgba(255, 255, 255, .022));
+    }
+
+    .feature-icon {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 28px;
+      border: 1px solid rgba(110, 216, 255, .36);
+      border-radius: 8px;
+      color: var(--cyan);
+    }
+
+    .feature-icon svg {
+      width: 24px;
+      height: 24px;
+      stroke: currentColor;
+      stroke-width: 1.7;
+      fill: none;
+    }
+
+    .feature h3 {
+      margin: 0 0 12px;
+      font-size: 20px;
+    }
+
+    .feature p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    .showcase {
+      background: #090a0d;
+      border-top: 1px solid rgba(255, 255, 255, .08);
+      border-bottom: 1px solid rgba(255, 255, 255, .08);
+    }
+
+    .showcase-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.22fr) minmax(320px, .78fr);
+      gap: clamp(20px, 3vw, 42px);
+      align-items: center;
+    }
+
+    .focus-frame {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, .12);
+      border-radius: 8px;
+      background: var(--panel);
+      box-shadow: var(--shadow);
+      aspect-ratio: 4 / 3;
+    }
+
+    .focus-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .focus-label {
+      position: absolute;
+      left: 18px;
+      bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+      border: 1px solid rgba(255, 255, 255, .16);
+      border-radius: 4px;
+      background: rgba(5, 6, 8, .7);
+      color: rgba(245, 242, 234, .82);
+      backdrop-filter: blur(12px);
+      font-size: 13px;
+    }
+
+    .focus-label::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--cyan);
+      box-shadow: 0 0 14px var(--cyan);
+    }
+
+    .detail-panel {
+      padding: clamp(24px, 3.8vw, 42px);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, .07), rgba(255, 255, 255, .025));
+    }
+
+    .detail-panel h2 {
+      font-size: clamp(30px, 4vw, 54px);
+    }
+
+    .detail-list {
+      display: grid;
+      gap: 12px;
+      margin: 28px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .detail-list li {
+      display: grid;
+      grid-template-columns: 28px minmax(0, 1fr);
+      gap: 12px;
+      align-items: start;
+      color: rgba(245, 242, 234, .76);
+      line-height: 1.65;
+    }
+
+    .detail-list li::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      margin-top: 8px;
+      border: 1px solid var(--gold);
+      transform: rotate(45deg);
+      box-shadow: 0 0 16px rgba(244, 178, 31, .28);
+    }
+
+    .thumb-strip {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .thumb {
+      height: 92px;
+      padding: 0;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, .12);
+      border-radius: 8px;
+      background: #111;
+      cursor: pointer;
+      opacity: .72;
+      transition: opacity .2s ease, border-color .2s ease, transform .2s ease;
+    }
+
+    .thumb:hover,
+    .thumb.active {
+      opacity: 1;
+      border-color: rgba(244, 178, 31, .72);
+      transform: translateY(-2px);
+    }
+
+    .thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .spec-band {
+      padding-top: 0;
+    }
+
+    .spec-layout {
+      display: grid;
+      grid-template-columns: minmax(280px, .88fr) minmax(0, 1.12fr);
+      gap: clamp(22px, 3vw, 44px);
+      align-items: stretch;
+    }
+
+    .spec-copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 30px;
+      padding: clamp(28px, 4vw, 48px);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background:
+        linear-gradient(135deg, rgba(110, 216, 255, .1), transparent 42%),
+        var(--panel);
+    }
+
+    .spec-copy h2 {
+      font-size: clamp(31px, 4.4vw, 58px);
+    }
+
+    .spec-copy p {
+      margin: 20px 0 0;
+      color: var(--muted);
+      line-height: 1.85;
+    }
+
+    .mini-metrics {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .metric {
+      padding: 16px;
+      border: 1px solid rgba(255, 255, 255, .12);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, .035);
+    }
+
+    .metric strong {
+      display: block;
+      color: var(--steel);
+      font-size: 22px;
+    }
+
+    .metric span {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    .spec-image {
+      position: relative;
+      overflow: hidden;
+      min-height: 620px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, .12);
+      background: #101114;
+      box-shadow: var(--shadow);
+    }
+
+    .spec-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, .12);
+      background: #111;
+      aspect-ratio: 4 / 3;
+    }
+
+    .gallery-item.wide {
+      grid-column: span 2;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .5s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.035);
+    }
+
+    .closing {
+      min-height: 560px;
+      display: grid;
+      align-items: center;
+      background:
+        linear-gradient(90deg, rgba(6, 7, 9, .96) 0%, rgba(6, 7, 9, .78) 45%, rgba(6, 7, 9, .32) 100%),
+        url("assets/angle-profile.png") center / cover no-repeat;
+      border-top: 1px solid rgba(255, 255, 255, .08);
+    }
+
+    .closing-content {
+      width: min(700px, 100%);
+    }
+
+    .closing h2 {
+      font-size: clamp(38px, 6vw, 76px);
+    }
+
+    .closing p {
+      max-width: 560px;
+      margin: 22px 0 0;
+      color: rgba(245, 242, 234, .76);
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 26px clamp(20px, 4vw, 64px);
+      color: rgba(245, 242, 234, .48);
+      border-top: 1px solid rgba(255, 255, 255, .08);
+      font-size: 13px;
+    }
+
+    @media (max-width: 980px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        min-height: 86vh;
+        padding-top: 112px;
+      }
+
+      .hero::before {
+        background:
+          linear-gradient(180deg, rgba(6, 7, 9, .55) 0%, rgba(6, 7, 9, .3) 45%, #060709 100%),
+          url("assets/front-stance.png") center / cover no-repeat;
+      }
+
+      .quick-spec {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        margin-top: 38px;
+      }
+
+      .section-head,
+      .showcase-grid,
+      .spec-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .feature-grid,
+      .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .spec-image {
+        min-height: auto;
+        aspect-ratio: 1122 / 1402;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .nav {
+        padding: 16px 18px;
+      }
+
+      .brand span,
+      .nav-cta {
+        display: none;
+      }
+
+      .brand .brand-mark {
+        display: block;
+      }
+
+      .hero {
+        min-height: 84vh;
+        padding: 102px 24px 42px;
+      }
+
+      .hero-content,
+      .hero-subtitle {
+        width: min(320px, calc(100vw - 48px));
+        max-width: min(320px, calc(100vw - 48px));
+      }
+
+      h1 {
+        max-width: 320px;
+        font-size: clamp(40px, 13vw, 52px);
+        line-height: 1.02;
+        word-break: keep-all;
+      }
+
+      h1 span {
+        display: block;
+      }
+
+      h1 span + span {
+        margin-left: 0;
+      }
+
+      .hero-actions {
+        width: min(320px, calc(100vw - 48px));
+        flex-direction: column;
+      }
+
+      .button {
+        width: 100%;
+        min-height: 48px;
+        padding: 0 16px;
+        flex: 0 0 auto;
+        font-size: 14px;
+      }
+
+      .quick-spec,
+      .feature-grid,
+      .thumb-strip,
+      .mini-metrics,
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .quick-spec div {
+        min-height: 74px;
+      }
+
+      section {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+
+      .feature {
+        min-height: 0;
+      }
+
+      .focus-frame {
+        aspect-ratio: 4 / 3;
+      }
+
+      .thumb {
+        height: 118px;
+      }
+
+      .gallery-item.wide {
+        grid-column: auto;
+      }
+
+      .closing {
+        min-height: 620px;
+        background:
+          linear-gradient(180deg, rgba(6, 7, 9, .68) 0%, rgba(6, 7, 9, .52) 42%, #060709 100%),
+          url("assets/angle-profile.png") center / cover no-repeat;
+      }
+
+      .footer {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="site-shell">
+    <header class="nav">
+      <a class="brand" href="#top" aria-label="雷麦科技">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>
+          <strong>雷麦科技</strong>
+          <span>Leimai Tech</span>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="页面导航">
+        <a href="#features">核心卖点</a>
+        <a href="#system">前杠系统</a>
+        <a href="#gallery">产品图集</a>
+      </nav>
+      <a class="nav-cta" href="#contact">获取方案</a>
+    </header>
+
+    <section class="hero" id="top">
+      <div class="hero-content">
+        <div class="eyebrow">LM-212 Off-road System</div>
+        <h1><span>212</span><span>骑士前杠</span></h1>
+        <p class="hero-subtitle">为硬派越野而生的智能前杠系统，把结构防护、绞盘预留、拖挂能力与专车姿态融合成一体。</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#system">查看系统细节</a>
+          <a class="button ghost" href="#gallery">浏览整车效果</a>
+        </div>
+      </div>
+      <div class="quick-spec" aria-label="核心信息">
+        <div>
+          <strong>212</strong>
+          <span>骑士车型专属适配</span>
+        </div>
+        <div>
+          <strong>4x4</strong>
+          <span>硬派越野装备语言</span>
+        </div>
+        <div>
+          <strong>LM</strong>
+          <span>雷麦科技改装系统</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="features">
+      <div class="section-inner">
+        <div class="section-head">
+          <div>
+            <p class="kicker">Designed for adventure</p>
+            <h2>把防护做进姿态里</h2>
+          </div>
+          <p class="section-copy">外观不是附加件，而是车辆性格的一部分。LM-212 前杠以硬朗折面、功能开孔与强化挂点，让城市通勤、长途穿越和野外救援都保持同一套高级秩序。</p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.6 2.9 8.7 7 10 4.1-1.3 7-5.4 7-10V6l-7-3Z"/><path d="M9 12.2 11.1 14.3 15.5 9.7"/></svg>
+            </div>
+            <h3>高强度结构</h3>
+            <p>面向越野使用场景强化防护区域，提升前部抗冲击与通过时的安心感。</p>
+          </article>
+          <article class="feature">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M5 8h14v7H5z"/><path d="M8 8V5h8v3"/><path d="M7 18h10"/><path d="M10 15v5h4v-5"/></svg>
+            </div>
+            <h3>绞盘预留</h3>
+            <p>关键位置提前规划安装空间，兼顾救援拓展和前脸整体的干净比例。</p>
+          </article>
+          <article class="feature">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M7 7h10v4H7z"/><path d="M4 15h16"/><path d="M8 15v3"/><path d="M16 15v3"/><path d="M6 18h4"/><path d="M14 18h4"/></svg>
+            </div>
+            <h3>拖挂加强</h3>
+            <p>强化拖挂点位让装备属性更明确，也让前杠视觉重心更稳。</p>
+          </article>
+          <article class="feature">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 15h16l-2-6H6l-2 6Z"/><path d="M7 15v3"/><path d="M17 15v3"/><path d="M8 11h8"/></svg>
+            </div>
+            <h3>专车适配</h3>
+            <p>围绕 212 骑士车身线条开发，让改装后的比例、间隙与姿态更完整。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="showcase" id="system">
+      <div class="section-inner showcase-grid">
+        <div>
+          <figure class="focus-frame">
+            <img id="focusImage" src="assets/front-stance.png" alt="212 骑士前杠正面姿态">
+            <figcaption class="focus-label" id="focusLabel">前杠正面姿态</figcaption>
+          </figure>
+          <div class="thumb-strip" aria-label="切换产品视角">
+            <button class="thumb active" type="button" data-image="assets/front-stance.png" data-label="前杠正面姿态"><img src="assets/front-stance.png" alt=""></button>
+            <button class="thumb" type="button" data-image="assets/angle-profile.png" data-label="侧前方整车比例"><img src="assets/angle-profile.png" alt=""></button>
+            <button class="thumb" type="button" data-image="assets/studio-side.png" data-label="车身侧面涂装"><img src="assets/studio-side.png" alt=""></button>
+            <button class="thumb" type="button" data-image="assets/hero-side.png" data-label="低位侧面姿态"><img src="assets/hero-side.png" alt=""></button>
+          </div>
+        </div>
+
+        <aside class="detail-panel">
+          <p class="kicker">Intelligent front bumper</p>
+          <h2>功能层次清晰，视觉足够克制</h2>
+          <ul class="detail-list">
+            <li>蜂窝通风设计，保留硬派机械感，同时弱化大面积金属件的厚重感。</li>
+            <li>灯具、牌照、绞盘与拖挂点整合在同一视觉轴线，前脸更有秩序。</li>
+            <li>黑色结构件与黄色车身形成强烈对比，适合门店海报、短视频封面和线上详情页。</li>
+            <li>兼顾展示感和实用感，适合面向越野玩家、改装门店和俱乐部客户。</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="spec-band">
+      <div class="section-inner spec-layout">
+        <div class="spec-copy">
+          <div>
+            <p class="kicker">Engineering view</p>
+            <h2>一张图看懂前杠系统</h2>
+            <p>前杠不是单一外观件，而是由防护结构、散热开孔、绞盘安装位、拖挂点与整车适配共同组成的系统。</p>
+          </div>
+          <div class="mini-metrics">
+            <div class="metric">
+              <strong>防护</strong>
+              <span>强化前部关键区域</span>
+            </div>
+            <div class="metric">
+              <strong>救援</strong>
+              <span>绞盘与拖挂拓展</span>
+            </div>
+            <div class="metric">
+              <strong>散热</strong>
+              <span>蜂窝式通风布局</span>
+            </div>
+            <div class="metric">
+              <strong>姿态</strong>
+              <span>专车比例完整呈现</span>
+            </div>
+          </div>
+        </div>
+        <figure class="spec-image">
+          <img src="assets/bumper-spec.png" alt="雷麦科技 212 骑士智能前杠系统详情图" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <div class="section-inner">
+        <div class="section-head">
+          <div>
+            <p class="kicker">Studio gallery</p>
+            <h2>暗场光影下的硬派质感</h2>
+          </div>
+          <p class="section-copy">亮黄色车身、黑色结构件、金属轮毂和车间灯光共同形成记忆点，适合用于品牌门店屏幕、招商页面和朋友圈海报延展。</p>
+        </div>
+
+        <div class="gallery-grid">
+          <figure class="gallery-item wide"><img src="assets/angle-profile.png" alt="黄色 212 骑士侧前方展示" loading="lazy"></figure>
+          <figure class="gallery-item"><img src="assets/hero-side.png" alt="黄色 212 骑士侧面展示" loading="lazy"></figure>
+          <figure class="gallery-item"><img src="assets/studio-side.png" alt="黄色 212 骑士车身涂装展示" loading="lazy"></figure>
+          <figure class="gallery-item wide"><img src="assets/front-stance.png" alt="黄色 212 骑士前杠展示" loading="lazy"></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing" id="contact">
+      <div class="section-inner">
+        <div class="closing-content">
+          <p class="kicker">Built to protect</p>
+          <h2>让 212 骑士拥有更完整的越野面孔</h2>
+          <p>从前杠开始，建立一套有力量、有秩序、可拓展的整车改装语言。适合展示、交付、俱乐部活动与高端越野玩家定制。</p>
+          <div class="hero-actions">
+            <button class="button primary" type="button" onclick="window.print()">打印 / 导出页面</button>
+            <a class="button ghost" href="#top">返回顶部</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>Leimai Tech LM-212 Off-road Front Bumper System</span>
+      <span>Designed for adventure · Engineered for extremes</span>
+    </footer>
+  </main>
+
+  <script>
+    const focusImage = document.querySelector("#focusImage");
+    const focusLabel = document.querySelector("#focusLabel");
+    const thumbs = document.querySelectorAll(".thumb");
+
+    thumbs.forEach((thumb) => {
+      thumb.addEventListener("click", () => {
+        thumbs.forEach((item) => item.classList.remove("active"));
+        thumb.classList.add("active");
+        focusImage.src = thumb.dataset.image;
+        focusLabel.textContent = thumb.dataset.label;
+      });
+    });
+  </script>
+</body>
+</html>
